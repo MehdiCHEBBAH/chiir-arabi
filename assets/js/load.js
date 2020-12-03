@@ -19,7 +19,7 @@ const loadAllPics = ()=>{
 (function($) {
 
     $.ajax({
-        url: "/data.json",
+        url: "http://mehdi-chebbah.ml/chiir-arabi/data.json",
         dataType: 'json',
         async: false,
         success: function(loaded_data) {
