@@ -5,7 +5,7 @@
         url: "http://mehdi-chebbah.ml/chiir-arabi/data.json",
         dataType: 'json',
         async: false,
-        success: function(loaded_data) {
+        success: function(data) {
             var id = +location.search.substring(1).split("=")[1];
             var element = data.find(e => e.id == id);
             document.title = element.title;
