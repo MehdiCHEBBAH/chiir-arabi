@@ -9,15 +9,26 @@ const addPic = (id)=>{
     `);
 };
 
+const loadAllPics = ()=>{
+    $content.empty()
+    for (let e of data){
+        addPic(e.id);
+    }
+}
+
 (function($) {
 
-    $.getJSON("../../data.json", function(loaded_data){
-        data = loaded_data;
-        for(let i of data){
-            addPic(i.id);
+    $.ajax({
+        url: "../../data.json",
+        dataType: 'json',
+        async: false,
+        success: function(loaded_data) {
+            data = loaded_data;
+            loadAllPics();
+        },
+        fail: function(err){
+            console.log("An error has occurred.");
         }
-    }).fail(function(){
-        console.log("An error has occurred.");
-    });
+      });
     
 })(jQuery);

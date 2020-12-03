@@ -10,7 +10,7 @@
         $('#chiir_content').html(element.content.split("\\n").join("<br />"));
         for(let e of element.tags){
             $('#chiir_tags').append(`
-                <a class="tag after second" href="#">${e} </a>
+                <a class="tag after second" href="index.html?q=${encodeURIComponent(e.substring(1).replaceAll("_", " "))}">${e} </a>
             `);
         }
     }).fail(function(){
