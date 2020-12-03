@@ -4,7 +4,7 @@ var data = [];
 const addPic = (id)=>{
     $content.append(`
         <div class="image fit">
-            <a href="detail.html?q=${id}"><img src="images/${id}.png" alt="" /></a>
+            <a href="detail.html?q=${id}"><img src="images/${id}.jpg" alt="" /></a>
         </div>
     `);
 };
