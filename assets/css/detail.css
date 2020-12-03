@@ -1,0 +1,38 @@
+.tag,.tag:visited,.tag:hover,.tag:active{
+    -webkit-backface-visibility:hidden;
+            backface-visibility:hidden;
+      position:relative;
+    transition:0.5s color ease;
+      text-decoration:none;
+      color:#17A398;
+      font-size:2.5em;
+  }
+  .tag:hover{
+      color:#0D53A2;
+  }
+  .tag.before:before,.tag.after:after{
+    content: "";
+    transition:0.5s all ease;
+    -webkit-backface-visibility:hidden;
+            backface-visibility:hidden;
+    position:absolute;
+  }
+  .tag.before:before{
+    top:-0.25em;
+  }
+  .tag.after:after{
+    bottom:-0.25em;
+  }
+  .tag.before:before,.tag.after:after{
+    height:5px;
+    height:0.35rem;
+    width:0;
+    background:#0D53A2;
+  }
+  .tag.second:after{
+    right:0;
+  }
+  
+  .tag.before:hover:before,.tag.after:hover:after{
+    width:100%;
+  }
