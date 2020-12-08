@@ -10,9 +10,10 @@ const addPic = (id)=>{
 };
 
 const loadAllPics = ()=>{
-    $content.empty()
-    for (let e of data){
-        addPic(e.id);
+    $content.empty();
+    var random_array = new Array(data.length).fill().map((a, i) => a = i).sort(() => Math.random() - 0.5);
+    for (let i of random_array){
+        addPic(data[i].id);
     }
 }
 
