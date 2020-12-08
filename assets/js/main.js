@@ -1,7 +1,8 @@
 
-(function($) {
+const CURRENT_URL = `http://chiir-arabi.tk`;
 
-	const CURRENT_URL = `http://chiir-arabi.tk/`;
+
+(function($) {
 	
 	skel.breakpoints({
 		xlarge:	'(max-width: 1680px)',
