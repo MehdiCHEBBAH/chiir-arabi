@@ -1,5 +1,5 @@
 
-const CURRENT_URL = `http://chiir-arabi.tk`;
+const CURRENT_URL = `https://mehdichebbah.github.io/chiir-arabi/`;
 
 
 (function($) {
